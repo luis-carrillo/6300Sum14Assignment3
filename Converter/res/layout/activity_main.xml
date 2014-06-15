@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <!-- Distance Block -->
+
+    <TextView
+        android:id="@+id/viewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Distance" />
+
+    <EditText
+        android:id="@+id/textDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioDistance"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/viewDistance"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <RadioGroup
+        android:id="@+id/radioDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewDistance"
+        android:layout_below="@+id/viewDistance"
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/radioDistance0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClickDistance"
+            android:text="Miles" />
+
+        <RadioButton
+            android:id="@+id/radioDistance1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClickDistance"
+            android:text="Kilometers" />
+    </RadioGroup>
+
+    <!-- Temperature Block -->
+    
+    <TextView
+        android:id="@+id/viewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/radioDistance"
+        android:layout_marginTop="50dp"
+        android:text="Temperature" />
+
+    <EditText
+        android:id="@+id/textTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/viewTemperature"
+        android:layout_alignBottom="@+id/viewTemperature"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/viewTemperature"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radioTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewTemperature"
+        android:layout_below="@+id/textTemperature"
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/radioTemperature0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClickTemperature"
+            android:text="Fahrenheit" />
+
+        <RadioButton
+            android:id="@+id/radioTemperature1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClickTemperature"
+            android:text="Celsius" />
+    </RadioGroup>
+
+
+    <!-- Weight Block -->
+    
+    <TextView
+        android:id="@+id/viewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/radioTemperature"
+        android:layout_marginTop="50dp"
+        android:text="Weight" />
+
+    <EditText
+        android:id="@+id/textWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/viewWeight"
+        android:layout_alignBottom="@+id/viewWeight"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/viewWeight"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radioWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewWeight"
+        android:layout_below="@+id/textWeight"
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/radioWeight0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClickWeight"
+            android:text="Pounds" />
+
+        <RadioButton
+            android:id="@+id/radioWeight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClickWeight"
+            android:text="Kilograms" />
+    </RadioGroup>
+
+</RelativeLayout>
